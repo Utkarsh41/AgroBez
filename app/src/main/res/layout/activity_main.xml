@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/layout_background"
+    tools:context=".MainActivity">
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/uiAnimation"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="5dp"
+        android:layout_width="290dp"
+        android:layout_height="180dp"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/walkingpothos" />
+
+
+<!--    </androidx.cardview.widget.CardView>-->
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_Data"
+        android:layout_width="330dp"
+        android:layout_height="160dp"
+        app:cardCornerRadius="28sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/uiAnimation"
+        android:backgroundTint="@color/card_background"
+
+        >
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/cl_cardView"
+            android:padding="10dp"
+            android:layout_marginLeft="5dp"
+            >
+<!--Temperature-->
+            <TextView
+                android:id="@+id/temperatureKey"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
+                android:text="@string/temperature"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:textSize="28sp"
+                android:layout_marginStart="5dp"
+                app:layout_constraintRight_toLeftOf="@id/temperatureValue"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+            </TextView>
+            <TextView
+                android:id="@+id/temperatureValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/retrieve_data"
+                android:textAlignment="center"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:layout_marginTop="0dp"
+                android:layout_marginStart="2dp"
+                android:textSize="28sp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toRightOf="@+id/temperatureKey"
+                />
+
+            <!--            Moisture-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/MoistureKey"
+                android:text="@string/moisture"
+                android:textColor="@color/white"
+                android:layout_marginLeft="5dp"
+                android:textStyle="bold"
+                android:textSize="28sp"
+
+                app:layout_constraintTop_toBottomOf="@+id/temperatureKey"
+                app:layout_constraintLeft_toLeftOf="parent"
+
+                android:layout_marginTop="5dp"
+                >
+
+            </TextView>
+            <TextView
+                android:id="@+id/moistureValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/_40"
+                android:textStyle="bold"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="2dp"
+                android:textSize="28sp"
+                app:layout_constraintTop_toBottomOf="@+id/temperatureValue"
+                app:layout_constraintLeft_toRightOf="@+id/MoistureKey"
+                />
+
+            <!--            Humidity-->
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/humidityKey"
+                android:text="@string/humidity"
+                android:textColor="@color/white"
+                android:layout_marginLeft="5dp"
+                android:textSize="28sp"
+                android:textStyle="bold"
+
+                app:layout_constraintTop_toBottomOf="@+id/MoistureKey"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:layout_marginTop="5dp"
+                >
+
+            </TextView>
+            <TextView
+                android:id="@+id/humidityValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/normal"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="2dp"
+                android:textSize="28sp"
+                app:layout_constraintTop_toBottomOf="@+id/moistureValue"
+                app:layout_constraintLeft_toRightOf="@+id/humidityKey"
+                />
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_Result"
+        android:layout_width="330dp"
+        android:layout_height="160dp"
+        app:cardCornerRadius="28sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cv_Data"
+        android:layout_marginTop="30dp"
+        android:backgroundTint="@color/card_background"
+
+        >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/cl_cardViewRes"
+            >
+
+
+            <TextView
+                android:id="@+id/show_result_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="2dp"
+                android:text=""
+                android:layout_marginTop="8dp"
+                android:textColor="#63EF0A"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+            </TextView>
+
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:id="@+id/pumpIv"
+                android:layout_marginTop="5dp"
+                android:layout_marginStart="15dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:src="@drawable/sprinkle"
+                app:layout_constraintTop_toBottomOf="@+id/show_result_tv"
+                >
+
+            </ImageView>
+
+            <TextView
+                android:id="@+id/onPumpTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="Start Pump"
+                android:layout_marginTop="2dp"
+                android:textColor="@color/white"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@+id/pumpSwitch"
+                app:layout_constraintStart_toEndOf="@+id/pumpIv"
+                app:layout_constraintTop_toBottomOf="@id/show_result_tv">
+
+            </TextView>
+
+            <com.google.android.material.switchmaterial.SwitchMaterial
+                android:id="@+id/pumpSwitch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/white"
+                android:layout_marginTop="10dp"
+                app:layout_constraintRight_toRightOf="parent"
+                android:layout_marginRight="15dp"
+                app:layout_constraintStart_toEndOf="@id/onPumpTv"
+                app:layout_constraintTop_toBottomOf="@id/show_result_tv"
+                tools:layout_editor_absoluteX="274dp"
+                tools:layout_editor_absoluteY="97dp" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+
+<!--    Leaf part for future-->
+    <Button
+        android:id="@+id/calculate_Button"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:text="@string/leaf_health"
+        android:textStyle="bold"
+        android:textSize="24sp"
+        app:layout_constraintTop_toBottomOf="@id/cv_Result"
+        android:layout_marginTop="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:backgroundTint="@android:color/holo_orange_light"
+        app:layout_constraintStart_toStartOf="parent">
+
+    </Button>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

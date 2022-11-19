@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "1051839182770",
+    "firebase_url": "https://agrobez-default-rtdb.firebaseio.com",
+    "project_id": "agrobez",
+    "storage_bucket": "agrobez.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1051839182770:android:c86d991a0b8cf7d7f656ab",
+        "android_client_info": {
+          "package_name": "com.utkarsh.agrobez"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1051839182770-o2282ut045ec7g37rq3d5c9l58ukeist.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDkqKSPMDq6NMl6uvK0ugo0c-zUW6yILYM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1051839182770-o2282ut045ec7g37rq3d5c9l58ukeist.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
