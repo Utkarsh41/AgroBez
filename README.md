@@ -16,4 +16,21 @@ humidity and moisture content in soil etc.
 
 <h2>AgroBez Application</h2>
 
+<h3>Splash screen</h2>
+
+![WhatsApp Image 2022-11-19 at 2 23 23 PM](https://user-images.githubusercontent.com/76621101/202843264-04f1f2ac-ddc1-4053-a2d3-ec5715b9df78.jpeg)
+
+<h3>Healthy plant</h2>
+
+![WhatsApp Image 2022-11-19 at 2 26 21 PM](https://user-images.githubusercontent.com/76621101/202843260-576832b8-6bab-4f8a-8fac-09744d8be75c.jpeg)
+
+<h3>UnHealthy plant</h2>
+
+![WhatsApp Image 2022-11-19 at 2 24 33 PM](https://user-images.githubusercontent.com/76621101/202843262-7c795ef6-679e-4d6b-8459-6f0dba7723e5.jpeg)
+
+<h3>UnHealthy plant notification</h2>
+
+![WhatsApp Image 2022-11-19 at 2 24 32 PM](https://user-images.githubusercontent.com/76621101/202843265-5b4839c4-6a4a-49b8-9dac-35f9793fd804.jpeg)
+
+
 
