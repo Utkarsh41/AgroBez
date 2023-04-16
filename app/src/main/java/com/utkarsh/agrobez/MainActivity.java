@@ -153,18 +153,21 @@ public class MainActivity extends AppCompatActivity {
                 Float MoistureValueInit = snapshot.child("test/moisture").getValue(Float.class);
                 Float HumidityValueInit = snapshot.child("test/humidity").getValue(Float.class);
 
+                Float staticMosistureVal = 1024.0f;
                 String TemperatureValue = Float.toString(TemperatureValueInit)+"°C";
-                String MoistureValue = Float.toString( MoistureValueInit);
-                String HumidityValue = Float.toString(HumidityValueInit);
+                String MoistureValue = Float.toString(MoistureValueInit);
+                String HumidityValue = Float.toString(HumidityValueInit)+"%";
 
-                if( (TemperatureValueInit >=17.0 && TemperatureValueInit<=28.0) && (HumidityValueInit >= 45.0 && HumidityValueInit<=65.0)){
+                if( (TemperatureValueInit >=17.0 && TemperatureValueInit<=28.0) && (HumidityValueInit >= 45.0 && HumidityValueInit<=85.0) && MoistureValueInit<=700){
                     resultTv.setText(healthTrack[1]);
                     resultTv.setTextColor(Color.parseColor("#63EF0A"));
 
                 }
                 else {
                     Toast.makeText(MainActivity.this, "Plant is Unhealthy", Toast.LENGTH_LONG).show();
-                    Toast.makeText(MainActivity.this, "Plant is Unhealthy", Toast.LENGTH_LONG).show();
+                    Toast.makeText(MainActivity.this, "Supply Water", Toast.LENGTH_LONG).show();
+                    Toast.makeText(MainActivity.this, "Supply Water", Toast.LENGTH_LONG).show();
+                    Toast.makeText(MainActivity.this, "Supply Water", Toast.LENGTH_LONG).show();
 
                     resultTv.setText(healthTrack[2]);
                     resultTv.setTextColor(Color.parseColor("#FF0000"));
@@ -191,8 +194,20 @@ public class MainActivity extends AppCompatActivity {
 
                 // after getting the value we are setting
                 // our value to our text view in below line.
+
+
+//                New deploy
+                if(MoistureValueInit==1024.0){
+                    moistureTv.setText("231.0");
+                }
+                else{
+                    Float calc = (staticMosistureVal - MoistureValueInit)+(231.0f);
+                    String tempMoistVal = Float.toString(calc);
+                    moistureTv.setText(tempMoistVal);
+
+                }
+
                 temperatureTv.setText(TemperatureValue);
-                moistureTv.setText(MoistureValue);
                 humidityTv.setText(HumidityValue);
 
                 progressDialog.dismiss();

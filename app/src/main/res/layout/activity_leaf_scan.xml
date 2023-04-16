@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/layout_background"
+    android:padding="2dp"
     tools:context=".LeafScan">
 
     <com.airbnb.lottie.LottieAnimationView
@@ -18,6 +19,129 @@
         app:lottie_autoPlay="true"
         app:lottie_loop="true"
         app:lottie_rawRes="@raw/leafscanning" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_LeafData"
+        android:layout_width="380dp"
+        android:layout_height="180dp"
+        app:cardCornerRadius="28sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/showPreviewImage"
+        android:backgroundTint="#8692f7">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            >
+
+            <TextView
+                android:id="@+id/plantIs"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/your_plant_is"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/marko_one"
+                android:layout_marginStart="20dp"
+               app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
+            </TextView>
+
+            <TextView
+                android:id="@+id/plantName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="@color/white"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:fontFamily="@font/marko_one"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="10dp"
+               app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/plantIs">
+            </TextView>
+
+
+            <TextView
+                android:id="@+id/pCTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/plant_s_confidence_is"
+                android:textColor="@color/white"
+                android:fontFamily="@font/marko_one"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/plantIs" />
+            <TextView
+                android:id="@+id/plantConfidence"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="@color/white"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:fontFamily="@font/marko_one"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="10dp"
+                app:layout_constraintTop_toBottomOf="@+id/plantName"
+                app:layout_constraintStart_toEndOf="@+id/pCTv">
+            </TextView>
+
+            <TextView
+                android:id="@+id/plantDiseaseU"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Plant Status: "
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:fontFamily="@font/marko_one"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="20dp"
+                app:layout_constraintTop_toBottomOf="@+id/plantConfidence"
+                app:layout_constraintStart_toStartOf="parent">
+            </TextView>
+            <TextView
+                android:id="@+id/plantDiseaseValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="@color/white"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:fontFamily="@font/marko_one"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="10dp"
+                app:layout_constraintTop_toBottomOf="@+id/plantConfidence"
+                app:layout_constraintStart_toEndOf="@+id/plantDiseaseU">
+            </TextView>
+
+            <TextView
+                android:id="@+id/searchDetails"
+                android:layout_width="400dp"
+                android:layout_height="wrap_content"
+                android:text="@string/click_here_to_see_details_and_prevention"
+                android:textColor="#FFD600"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:padding="4dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="20dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/plantDiseaseU"
+                >
+            </TextView>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
 
     <ImageView
         android:id="@+id/showPreviewImage"
@@ -33,13 +157,17 @@
 
     </ImageView>
 
+
+
+
     <ImageView
         android:id="@+id/CameraButton"
         android:layout_width="50dp"
         android:layout_height="50dp"
-        android:layout_marginStart="40dp"
+        android:layout_marginStart="0dp"
         android:layout_marginBottom="60dp"
         android:src="@drawable/camphoto"
+        app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent">
 
@@ -54,42 +182,16 @@
         android:textColor="@color/white"
         android:textSize="20sp"
         android:textStyle="bold"
-        android:layout_marginStart="13dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginStart="0dp"
+        app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/CameraButton">
 
     </TextView>
 
 
-
-    <ImageView
-        android:id="@+id/GalleryButton"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_marginEnd="40dp"
-        android:layout_marginBottom="60dp"
-        android:src="@drawable/galleryphoto"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintRight_toRightOf="parent">
-
-    </ImageView>
-
-    <TextView
-        android:id="@+id/galleryTv"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:padding="8dp"
-        android:text="Select Photo"
-        android:textColor="@color/white"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        android:layout_marginEnd="1dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/CameraButton">
-
-    </TextView>
 
 
 

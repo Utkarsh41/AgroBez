@@ -22,6 +22,6 @@ public class Slpash extends AppCompatActivity {
                 startActivity(intent);
                 finish();
             }
-        },3000);
+        },3400);
     }
 }

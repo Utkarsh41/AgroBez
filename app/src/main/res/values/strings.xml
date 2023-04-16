@@ -1,13 +1,16 @@
 <resources>
     <string name="app_name">AgroBez</string>
     <string name="retrieve_data">46</string>
-    <string name="temperature">Temperature:</string>
-    <string name="moisture">Moisture:</string>
+    <string name="temperature">Temperature: </string>
+    <string name="moisture">Moisture: </string>
     <string name="_40">40%</string>
-    <string name="humidity">Humidity:</string>
+    <string name="humidity">Humidity: </string>
     <string name="normal">Normal</string>
     <string name="HealthStatus">Plant is Healthy</string>
     <string name="HealthyRange">Healthy range 5 to 25 unit</string>
     <string name="agrobez">AgroBez</string>
     <string name="leaf_health">Scan Leaf</string>
+    <string name="your_plant_is">Your Plant is:</string>
+    <string name="plant_s_confidence_is">Plant\'s Confidence:</string>
+    <string name="click_here_to_see_details_and_prevention">Click Here to see Details and Prevention</string>
 </resources>
